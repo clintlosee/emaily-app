@@ -1,3 +1,3 @@
 node_modules/
-keys.js
-variables.env
+dev.js
+.DS_store
