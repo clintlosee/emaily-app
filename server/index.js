@@ -7,7 +7,7 @@ require('./models/User');
 require('./services/passport');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(keys.DATABASE);
+mongoose.connect(keys.DATABASE_LOCAL);
 
 const app = express();
 
