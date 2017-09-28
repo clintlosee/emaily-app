@@ -16,4 +16,3 @@ ReactDOM.render(
     </Provider>,
     document.querySelector('#root')
 );
-// const survey = { title: 'my title', subject: 'my subject', recipients: 'clint.losee@gmail.com', body: 'Heres the body of the email' };
