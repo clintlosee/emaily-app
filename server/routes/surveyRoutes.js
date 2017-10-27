@@ -31,10 +31,15 @@ module.exports = app => {
             await survey.save();
             req.user.credits -= 1;
             const user = await req.user.save();
-            
+
             res.send(user);
         } catch (err) {
             res.status(422).send(err);
         }
+    });
+
+    app.post('/api/surveys/webhooks', (req, res) => {
+        console.log(req.body);
+        res.send({});
     });
 };
