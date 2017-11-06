@@ -1,3 +1,6 @@
+// Sendgrid local webhook url : https://qzwxefazcb.localtunnel.me/api/surveys/webhooks
+// Sendgrid prod webhook url : https://pure-hamlet-14064.herokuapp.com/api/surveys/webhooks
+
 const _ = require('lodash');
 const Path = require('path-parser');
 const { URL } = require('url');
@@ -48,7 +51,7 @@ module.exports = app => {
                     }
                 }, {
                     $inc: { [choice]: 1 },
-                    $set: { 'recipients.$.resonded': true },
+                    $set: { 'recipients.$.responded': true },
                     lastResponded: new Date()
                 }).exec();
             })
